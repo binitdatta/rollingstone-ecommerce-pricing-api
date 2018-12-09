@@ -1,9 +1,9 @@
-How to test the User REST API
+How to test the Pricing REST API
 
-1. Get All User With
+1. Get All Pricing With
 
 METHOD:  GET
-URL: http://localhost:9090/rscommerce/pdp-service/account/user
+URL: http://localhost:9096/rscommerce/pdp-service/account/pricing
 
 Results
 
@@ -11,13 +11,14 @@ Results
    "content":[  
       {  
          "id":1,
-         "userName":"bdatta",
-         "firstName":"Binit",
-         "lastName":"Datta",
-         "sex":"M",
+         "productCode":"1001",
+         "pricingId":"100001",
          "memberType":"G",
-         "accountNumber":"10001",
-         "registrationDate":"2015-01-01"
+         "priceType":"regular",
+         "discountAmount":12.0,
+         "display":"12.00",
+         "originalPrice":18.0,
+         "discountedPrice":10.0
       }
    ],
    "pageable":{  
@@ -44,10 +45,11 @@ Results
    }
 }
 
-2. Create a New User With
+2. Create a New Pricing With
 
 METHOD: POST
-URL: http://localhost:9090/rscommerce/pdp-service/account/user
+URL: http://localhost:9096/rscommerce/pdp-service/account/pricing
+
 BODY:
 
 {
